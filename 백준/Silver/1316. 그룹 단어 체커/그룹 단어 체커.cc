@@ -10,16 +10,16 @@ int main() {
 
 		bool alphabet[26] = { false, };
 		alphabet[(int)(s[0]) - 97] = true;
-		for (int i = 1; i < s.size(); i++) {
-			if (s[i] == s[i - 1]) {
+		for (int j = 1; j < s.size(); j++) {
+			if (s[j] == s[j - 1]) {
 				continue;
 			}
-			else if (alphabet[(int)(s[i]) - 97] == true) {
+			else if (alphabet[(int)(s[j]) - 97] == true) {
 				count++;
 				break;
 			}
 			else {
-				alphabet[(int)(s[i] - 97)] = true;
+				alphabet[(int)(s[j] - 97)] = true;
 			}
 		}
 	}
